@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SaveCal Affordability Program Estimation Tool</title>
+  <!-- Bootstrap File -->
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS file -->  
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+<div class="container"> 
+  <div class="row">
+	<div class="jumbotron jumbotron-fluid text-center col-xs-12 col-md-12">
+		<img src="logo.jpg" alt="SaveCal" class=" col-xs-12 col-md-4" id="logo">
+		<h1 class="col-xs-12 col-md-8">Affordability Program Estimation Tool</h1>
+	</div>
+  </div>
+</div>  		
+
+<!-- Calculator inputs -->
+
+<div class="container" id="inputs"> 
+<form id="target">
+  <div class="row">
+  	<div class="col-md-2"></div>
+    <div class="col-md-2">
+      <label class="step">Step 1: <br><p class="label1">Enter Project Amount</p></label>
+      <input type="text" id="projectAmount" class="form-control" placeholder="$0.00">
+    </div>
+    <div class="col-md-2">
+      <label class="step">Step 2: <br><p class="label1">Monthly Utility Savings</p></label>
+      <input type="text" id="monthlySavings" class="form-control" placeholder="$0">
+    </div>
+    <div class="col-md-2">
+      <label class="step">Step 3: <br><p class="label1">Annual Rate Increase</p></label>	
+      <input type="text" id="rateIncrease" class="form-control" placeholder="0.0%">
+    </div>
+    <div class="col-md-2">
+      <center><input type="submit" id="submit" class="btn btn-success btn-lg col-xs-12" value="Double-Click"><br><br>
+	  <div id="clear" class="btn btn-primary col-xs-12">CLEAR</div></center>		
+    </div>	
+    <div class="col-md-2"></div>
+  </div>
+</form>
+</div>
+<br><br>
+
+<!-- Main Table -->
+
+<div class="container" id="grid"> 
+  <!-- Row 1 --><!--
+  <div class="row" id="row1">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A1">
+		Plans:
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B1">
+		5 Years
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C1">
+		12 years
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D1">
+		20 years
+	</span>
+	<span class="text-center col-xs-2 col-md-2" id="E1">
+		9.99%-8 years
+	</span>
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>-->
+  
+  <!-- Row 2 --><!--
+  <div class="row" id="row2">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A2">
+		APR:
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B2">
+		0.00%
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C2">
+		3.99%
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D2">
+		7.90%
+	</span>
+	<span class="text-center col-xs-2 col-md-2" id="E2">
+		9.99%
+	</span>
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>-->
+
+  <!-- Row 3 -->
+  <div class="row col-xs-12 col-md-12" id="row3">
+	<div class="text-center cell col-xs-2 col-md-2" id="A3">
+		Term
+	</div>
+	<div class="text-center cell col-xs-3 col-md-3" id="B3">
+		5 Years
+	</div>
+	<div class="text-center cell col-xs-3 col-md-3" id="C3">
+		12 Years
+	</div>
+	<div class="text-center cell col-xs-3 col-md-3" id="D3">
+		20 Years
+	</div>
+	<!--<span class="text-center col-xs-2 col-md-2" id="E3">
+		96 months
+	</span>-->
+  </div>
+
+    <!-- Row 4 --><!--
+  <div class="row" id="row4">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A4">
+		 Promotional Period Payments:
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B4">
+		$ 0.00
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C4">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D4">
+		N/A
+	</span>
+	<span class="text-center col-xs-2 col-md-2" id="E4">
+		N/A
+	</span>
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>-->
+
+    <!-- Row 5 -->
+  <div class="row" id="row5">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A5">
+		Monthly Payments
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B5">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C5">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D5">
+		-
+	</span>
+	<!--<span class="text-center col-xs-2 col-md-2" id="E5">
+		-
+	</span>-->
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>
+
+  <!-- Row 6 -->
+  <div class="row" id="row6">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A6">
+		Monthly Utility Savings
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B6">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C6">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D6">
+		-
+	</span>
+	<!--<span class="text-center col-xs-2 col-md-2" id="E6">
+		-
+	</span>-->
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>
+
+    <!-- Row 12 -->
+  <div class="row" id="row6">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A12">
+		Annual Payments
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B12">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C12">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D12">
+		-
+	</span>
+	<!--<span class="text-center col-xs-2 col-md-2" id="E12">
+		-
+	</span>-->
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>
+  
+      <!-- Row 8 -->
+  <div class="row" id="row8">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A8">
+		Net Total
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B8">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C8">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D8">
+		-
+	</span>
+	<!--<span class="text-center col-xs-2 col-md-2" id="E8">
+		-
+	</span>-->
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>
+  
+    <!-- Row 7 -->
+  <div class="row" id="row7">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A7">
+		Net Payments
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B7">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C7">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D7">
+		-
+	</span>
+	<!--<span class="text-center col-xs-2 col-md-2" id="E7">
+		-
+	</span>-->
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>
+
+
+
+    <!-- Row 9 --><!--
+  <div class="row" id="row9">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A9">
+		Total Energy Savings
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B9">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C9">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D9">
+		-
+	</span>
+	<span class="text-center col-xs-2 col-md-2" id="E9">
+	    -
+	</span>
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>-->
+
+    <!-- Row 10 --><!--
+  <div class="row" id="row10">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<span class="text-center col-xs-12 col-md-2" id="A10">
+		Total Net Impact
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="B10">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="C10">
+		-
+	</span>
+	<span class="text-center col-xs-3 col-md-2" id="D10">
+		-
+	</span>
+	<span class="text-center col-xs-2 col-md-2" id="E10">
+		-
+	</span>
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>-->
+
+    <!-- Row 11 --><!--
+  <div class="row" id="row11">
+	<div class="text-center col-xs-0 col-md-1"></div>
+	<div class="text-center col-xs-12 col-md-2" id="A11">
+	</div>
+	<div class="text-center col-xs-3 col-md-2" id="B11">
+		Promotional Plan (5 month Promo Rate)
+	</div>
+	<div class="text-center col-xs-3 col-md-2" id="C11">
+		Promotional Plan (18 month Promo Rate)
+	</div>
+	<div class="text-center col-xs-3 col-md-2" id="D11">
+	</div>
+	<div class="text-center col-xs-2 col-md-2" id="E11">
+	</div>
+	<div class="text-center col-xs-0 col-md-1"></div>
+  </div>-->
+
+</div>
+
+<!--<center><a href="http://finance.savecal.info/"><button id="apply" class="btn btn-danger col-xs-12">APPLY NOW</button></a></center>-->
+
+<!-- Disclaimer -->
+
+<div class="container"> 
+  <div class="row">
+
+	<div class="text-center col-md-12">
+		<div class="row">
+			<div class="text-center col-md-12">
+				<h3>Disclaimer</h3>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="text-center col-md-12">
+				<h6>*Potential energy savings may vary depending on your personal life style, system settings, equipment maintenance, local climate, actual construction and installation. Not all home owners will qualify for the SaveCal Affordability Program. SaveCal uses third party financing.</h6>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="text-center col-md-12">
+				<h5>**Net impact is the total amount after the average energy savings have been deducted from the total financed amount, including incurred interest.</h5>
+			</div>	
+		</div>
+	</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Application Form -->
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+
+method="POST">
+
+<input type=hidden name="orgid" value="00D1I0000002Ml2">
+<input type=hidden name="retURL" value="http://www.savecal.com">
+
+
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20"
+
+type="text" /><br>
+
+<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20"
+
+type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20"
+
+type="text" /><br>
+
+<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject"
+
+size="20" type="text" /><br>
+
+<label for="description">Description</label><textarea name="description"></textarea><br><br>
+
+
+
+Photo ID Type:<select  id="00N1I00000LAbRv" name="00N1I00000LAbRv" title="Photo ID
+
+Type"><option value="">--None--</option><option value="Drivers License">Drivers
+
+License</option>
+<option value="State ID">State ID</option>
+<option value="US Passport">US Passport</option>
+<option value="US Military ID">US Military ID</option>
+<option value="ID Not Available at this Time">ID Not Available at this Time</option>
+</select><br>
+
+ID#:<input  id="00N1I00000LAbSo" maxlength="20" name="00N1I00000LAbSo" size="20" type="text"
+
+/><br>
+
+ID Issue Date:<span class="dateInput dateOnlyInput"><input  id="00N1I00000LAbS0"
+
+name="00N1I00000LAbS0" size="12" type="text" /></span><br>
+
+ID Expire Date:<span class="dateInput dateOnlyInput"><input  id="00N1I00000LAbSt"
+
+name="00N1I00000LAbSt" size="12" type="text" /></span><br>
+
+ID Issue State:<select  id="00N1I00000LAbSA" name="00N1I00000LAbSA" title="ID Issue
+
+State"><option value="">--None--</option><option value="AL">AL</option>
+<option value="AK">AK</option>
+<option value="AZ">AZ</option>
+<option value="AR">AR</option>
+<option value="CA">CA</option>
+<option value="CO">CO</option>
+<option value="CT">CT</option>
+<option value="DE">DE</option>
+<option value="FL">FL</option>
+<option value="GA">GA</option>
+<option value="HI">HI</option>
+<option value="ID">ID</option>
+<option value="IL">IL</option>
+<option value="IN">IN</option>
+<option value="IA">IA</option>
+<option value="KS">KS</option>
+<option value="KY">KY</option>
+<option value="LA">LA</option>
+<option value="ME">ME</option>
+<option value="MD">MD</option>
+<option value="MA">MA</option>
+<option value="MI">MI</option>
+<option value="MN">MN</option>
+<option value="MS">MS</option>
+<option value="MO">MO</option>
+<option value="MT">MT</option>
+<option value="NE">NE</option>
+<option value="NV">NV</option>
+<option value="NH">NH</option>
+<option value="NJ">NJ</option>
+<option value="NM">NM</option>
+<option value="NY">NY</option>
+<option value="NC">NC</option>
+<option value="ND">ND</option>
+<option value="OH">OH</option>
+<option value="OK">OK</option>
+<option value="OR">OR</option>
+<option value="PA">PA</option>
+<option value="RI">RI</option>
+<option value="SC">SC</option>
+<option value="SD">SD</option>
+<option value="TN">TN</option>
+<option value="TX">TX</option>
+<option value="UT">UT</option>
+<option value="VT">VT</option>
+<option value="VA">VA</option>
+<option value="WA">WA</option>
+<option value="WV">WV</option>
+<option value="WI">WI</option>
+<option value="WY">WY</option>
+</select><br><br>
+
+
+Date of Birth:<span class="dateInput dateOnlyInput"><input  id="00N1I00000LAbSK"
+
+name="00N1I00000LAbSK" size="12" type="text" /></span><br>
+
+SSN#:<input  id="00N1I00000LAbSj" maxlength="9" name="00N1I00000LAbSj" size="20" type="text"
+
+/><br><br>
+
+
+
+Employer:<input  id="00N1I00000LAbSP" maxlength="255" name="00N1I00000LAbSP" size="20"
+
+type="text" /><br>
+
+Self-Employed:<select  id="00N1I00000LAbT3" name="00N1I00000LAbT3" title="Self-
+
+Employed"><option value="">--None--</option><option value="Yes">Yes</option>
+<option value="No">No</option>
+</select><br>
+
+Position:<input  id="00N1I00000LAbSU" maxlength="100" name="00N1I00000LAbSU" size="20"
+
+type="text" /><br>
+
+Employer Phone:<input  id="00N1I00000LAbT8" maxlength="40" name="00N1I00000LAbT8"
+
+onkeydown="formatPhoneOnEnter(this, event);" size="20" type="text" /><br>
+
+Years at Current Job:<input  id="00N1I00000LAbSZ" maxlength="2" name="00N1I00000LAbSZ"
+
+size="20" type="text" /><br>
+
+Months at Current Job:<input  id="00N1I00000LAbSe" maxlength="2" name="00N1I00000LAbSe"
+
+size="20" type="text" /><br><br>
+
+
+Mortgage Payment:<input  id="00N1I00000LAbSy" name="00N1I00000LAbSy" size="20" type="text"
+
+/><br>
+
+Gross Monthly Income:<input  id="00N1I00000LAbTD" name="00N1I00000LAbTD" size="20"
+
+type="text" /><br><br>
+
+Target Payment:<input  id="00N1I00000LBv52" name="00N1I00000LBv52" size="20" type="text" /><br>
+
+
+Comments:<textarea  id="00N1I00000LAbTS" name="00N1I00000LAbTS" type="text"
+
+wrap="soft"></textarea><br>
+
+<hr>
+<h5>
+Collection of Information and Verification. We may require that you furnish us and the Lender with identifying information. We use this information as detailed under our Privacy Policy. We also use this information to match you with potential loan offers from Lenders. You authorize us and Lenders to obtain a personal credit profile from a credit bureau for credit pre-qualification and identity verification. You further agree that we may verify your identity and the information you provide us with third parties. A Lender may require more information from you to apply for a loan. The terms and conditions of any loan available from the Lender may change depending on information available to the Lender or your complete credit profile. We, or a Lender, may require further information from you to comply with our legal obligations, including, without limitation, anti-terrorism laws and regulations. You agree that any information you provide us will be governed by the Terms of Use, including, without limitation, the Conditions of Use section below. 
+</h5>
+<hr>
+
+<h4>
+By clicking submit, you are agreeing to the above terms.
+</h4>
+
+<input type="submit" name="submit" value="Submit">
+
+</form>
+
+<script src="app.js"></script>
+</body>
+</html>

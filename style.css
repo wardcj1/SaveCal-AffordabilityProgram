@@ -1,0 +1,113 @@
+h5 {
+    color: rgb(109,111,114);
+}
+
+body {
+    color: rgb(0,90,171);
+    background-image: url("fabricBg.png");
+}
+
+/*span {
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(109,111,114);
+	margin:2px;
+}*/
+
+.cell {
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(109,111,114);
+	margin:2px;
+}
+
+#grid {
+	background-color: rgb(1,158,221);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#inputs {
+	background-color: lightblue;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.step {
+	color: rgb(187,8,38);
+}
+
+.label1 {
+	color: rgb(0,90,171);
+}
+
+#logo {
+	border-radius: 45px;
+}
+
+#row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10, #row11 {
+	margin-bottom: 7px;
+}
+
+#A7, #B7, #C7, #D7, #E7{
+	background-color: rgb(44,253,141);
+	font-size: 17px;
+}
+
+#A1, #A2, #A3, #A4, #A5, #A6, #A8, #A12 {
+	background-color: rgb(253, 245, 10);
+}
+
+#B3, #C3, #D3 {
+	background-color: rgb(253, 245, 10);
+	font-size: 17px;
+	font-weight: 700;
+}
+
+
+#B1, #B2, #B4, #B5, #B6, #B8, #B12 {
+	background-color: rgb(240,240,240);
+	font-size: 17px;
+}
+
+#C1, #C2, #C4, #C5, #C6, #C8, #C12 {
+	background-color: rgb(225,225,225);
+	font-size: 17px;
+}
+
+#D1, #D2, #D4, #D5, #D6, #D8, #D12 {
+	background-color: rgb(210,210,210);
+	font-size: 17px;
+}
+
+#E1, #E2, #E4, #E5, #E6, #E8, #E12 {
+	background-color: rgb(195,195,195);
+	font-size: 17px;
+}
+
+
+#A1, #A2, #A3, #A4, #A5, #A6, #A7, #A8, #A9, #A10, #A12 {
+	font-weight: 700;
+	font-size: 17px;		
+}
+
+#A9, #B9, #C9, #D9, #E9 {
+	background-color: rgb(88,131,101);
+	color: white;
+	font-size: 17px;
+}
+
+#A10, #B10, #C10, #D10, #E10 {
+	background-color: rgb(251,198,16);
+	color: (124,126,129);
+	font-size: 17px;
+}
+
+#B11, #C11 {
+	color: (0,0,0);
+	font-size: 8px;
+}
+
+#projectAmount, #monthlySavings, #rateIncrease, #submit, #clear {
+	margin: 10px;
+}
