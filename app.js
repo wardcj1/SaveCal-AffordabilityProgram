@@ -63,15 +63,11 @@ var D12Result = "-";
     $("#B7").text("$ " + B7Result);
     B7Result = B5Result - B6Result;
 
-    //((($("#projectAmount").val() * 0.01666667).toFixed(2)) - (($("#monthlySavings").val() * (Math.pow(1 + ($("#rateIncrease").val() / 100), 5) )).toFixed(2))).toFixed(0); 
-
     $("#C7").text("$ " + C7Result);
     C7Result = C5Result - C6Result; 
 
     $("#D7").text("$ " + D7Result);
     D7Result = D5Result - D6Result;
-
-    //((($("#projectAmount").val() * 0.01077).toFixed(0)) - (($("#monthlySavings").val() * (Math.pow(1 + ($("#rateIncrease").val() / 100), 12) )).toFixed(0))).toFixed(0);     
 
     $("#E7").text("$ " + E7Result);
     E7Result = ((($("#projectAmount").val() * 0.0157).toFixed(0)) - (($("#monthlySavings").val() * (Math.pow(1 + ($("#rateIncrease").val() / 100), 7.58333333333) )).toFixed(0))).toFixed(0);
