@@ -7,24 +7,25 @@ body {
     background-image: url("fabricBg.png");
 }
 
-/*span {
-	border-style: solid;
-	border-width: 2px;
-	border-color: rgb(109,111,114);
-	margin:2px;
-}*/
+.jumbotron {
+	background-color: rgb(234,147,12);
+	font-family: times;
+	border-radius: 7px;
+}
 
 .cell {
 	border-style: solid;
 	border-width: 2px;
-	border-color: rgb(109,111,114);
-	margin:2px;
+	border-color: rgb(1,158,221);
+	margin-top: 5px;
 }
 
 #grid {
 	background-color: rgb(1,158,221);
-	border-radius: 10px;
-	padding: 10px;
+	border-color: rgb(1,158,221);
+	border-radius: 7px;
+	border-width: 10px;
+	border-style: solid;
 }
 
 #inputs {
@@ -39,10 +40,11 @@ body {
 
 .label1 {
 	color: rgb(0,90,171);
+	font-size: 12px;
 }
 
 #logo {
-	border-radius: 45px;
+	height: 60px;
 }
 
 #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10, #row11 {

@@ -2,26 +2,17 @@
 <html>
 <head>
     <title>SaveCal Affordability Program Estimation Tool</title>
-  <!-- Bootstrap File -->
   <link rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS file -->  
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-<div class="container"> 
-  <div class="row">
-	<div class="jumbotron jumbotron-fluid text-center col-xs-12 col-md-12">
-		<img src="logo.jpg" alt="SaveCal" class=" col-xs-12 col-md-4" id="logo">
-		<h1 class="col-xs-12 col-md-8">Affordability Program Estimation Tool</h1>
-	</div>
-  </div>
+<div class="container jumbotron" id="banner">
+		<center><img src="logo_clear.png" alt="SaveCal" id="logo">
+		<h1>Affordability Program</h1></center>
 </div>  		
 
 <!-- Calculator inputs -->
@@ -55,283 +46,125 @@
 <!-- Main Table -->
 
 <div class="container" id="grid"> 
-  <!-- Row 1 --><!--
-  <div class="row" id="row1">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A1">
-		Plans:
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B1">
-		5 Years
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C1">
-		12 years
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D1">
-		20 years
-	</span>
-	<span class="text-center col-xs-2 col-md-2" id="E1">
-		9.99%-8 years
-	</span>
-	<div class="text-center col-xs-0 col-md-1"></div>
-  </div>-->
-  
-  <!-- Row 2 --><!--
-  <div class="row" id="row2">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A2">
-		APR:
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B2">
-		0.00%
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C2">
-		3.99%
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D2">
-		7.90%
-	</span>
-	<span class="text-center col-xs-2 col-md-2" id="E2">
-		9.99%
-	</span>
-	<div class="text-center col-xs-0 col-md-1"></div>
-  </div>-->
-
   <!-- Row 3 -->
-  <div class="row col-xs-12 col-md-12" id="row3">
-	<div class="text-center cell col-xs-2 col-md-2" id="A3">
+  <div class="row" id="row3">
+	<div class="text-center cell col-xs-3" id="A3">
 		Term
 	</div>
-	<div class="text-center cell col-xs-3 col-md-3" id="B3">
+	<div class="text-center cell col-xs-3" id="B3">
 		5 Years
 	</div>
-	<div class="text-center cell col-xs-3 col-md-3" id="C3">
+	<div class="text-center cell col-xs-3" id="C3">
 		12 Years
 	</div>
-	<div class="text-center cell col-xs-3 col-md-3" id="D3">
+	<div class="text-center cell col-xs-3" id="D3">
 		20 Years
 	</div>
-	<!--<span class="text-center col-xs-2 col-md-2" id="E3">
-		96 months
-	</span>-->
   </div>
-
-    <!-- Row 4 --><!--
-  <div class="row" id="row4">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A4">
-		 Promotional Period Payments:
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B4">
-		$ 0.00
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C4">
-		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D4">
-		N/A
-	</span>
-	<span class="text-center col-xs-2 col-md-2" id="E4">
-		N/A
-	</span>
-	<div class="text-center col-xs-0 col-md-1"></div>
-  </div>-->
 
     <!-- Row 5 -->
   <div class="row" id="row5">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A5">
+	<div class="text-center cell col-xs-3" id="A5">
 		Monthly Payments
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B5">
+	</div>
+	<div class="text-center cell col-xs-3" id="B5">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C5">
+	</div>
+	<div class="text-center cell col-xs-3" id="C5">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D5">
+	</div>
+	<div class="text-center cell col-xs-3" id="D5">
 		-
-	</span>
-	<!--<span class="text-center col-xs-2 col-md-2" id="E5">
-		-
-	</span>-->
-	<div class="text-center col-xs-0 col-md-1"></div>
+	</div>
   </div>
 
   <!-- Row 6 -->
   <div class="row" id="row6">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A6">
+	<div class="text-center cell col-xs-3" id="A6">
 		Monthly Utility Savings
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B6">
+	</div>
+	<div class="text-center cell col-xs-3" id="B6">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C6">
+	</div>
+	<div class="text-center cell col-xs-3" id="C6">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D6">
+	</div>
+	<div class="text-center cell col-xs-3" id="D6">
 		-
-	</span>
-	<!--<span class="text-center col-xs-2 col-md-2" id="E6">
-		-
-	</span>-->
-	<div class="text-center col-xs-0 col-md-1"></div>
+	</div>
   </div>
 
     <!-- Row 12 -->
   <div class="row" id="row6">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A12">
+	<span class="text-center cell col-xs-3" id="A12">
 		Annual Payments
 	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B12">
+	<span class="text-center cell col-xs-3" id="B12">
 		-
 	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C12">
+	<span class="text-center cell col-xs-3" id="C12">
 		-
 	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D12">
+	<span class="text-center cell col-xs-3" id="D12">
 		-
 	</span>
-	<!--<span class="text-center col-xs-2 col-md-2" id="E12">
-		-
-	</span>-->
-	<div class="text-center col-xs-0 col-md-1"></div>
   </div>
   
       <!-- Row 8 -->
   <div class="row" id="row8">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A8">
+	<div class="text-center cell col-xs-3" id="A8">
 		Net Total
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B8">
+	</div>
+	<div class="text-center cell col-xs-3" id="B8">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C8">
+	</div>
+	<div class="text-center cell col-xs-3" id="C8">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D8">
+	</div>
+	<div class="text-center cell col-xs-3" id="D8">
 		-
-	</span>
-	<!--<span class="text-center col-xs-2 col-md-2" id="E8">
-		-
-	</span>-->
-	<div class="text-center col-xs-0 col-md-1"></div>
+	</div>
   </div>
   
     <!-- Row 7 -->
   <div class="row" id="row7">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A7">
+	<div class="text-center cell col-xs-3" id="A7">
 		Net Payments
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B7">
+	</div>
+	<div class="text-center cell col-xs-3" id="B7">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C7">
+	</div>
+	<div class="text-center cell col-xs-3" id="C7">
 		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D7">
+	</div>
+	<div class="text-center cell col-xs-3" id="D7">
 		-
-	</span>
-	<!--<span class="text-center col-xs-2 col-md-2" id="E7">
-		-
-	</span>-->
-	<div class="text-center col-xs-0 col-md-1"></div>
+	</div>
   </div>
-
-
-
-    <!-- Row 9 --><!--
-  <div class="row" id="row9">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A9">
-		Total Energy Savings
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B9">
-		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C9">
-		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D9">
-		-
-	</span>
-	<span class="text-center col-xs-2 col-md-2" id="E9">
-	    -
-	</span>
-	<div class="text-center col-xs-0 col-md-1"></div>
-  </div>-->
-
-    <!-- Row 10 --><!--
-  <div class="row" id="row10">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<span class="text-center col-xs-12 col-md-2" id="A10">
-		Total Net Impact
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="B10">
-		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="C10">
-		-
-	</span>
-	<span class="text-center col-xs-3 col-md-2" id="D10">
-		-
-	</span>
-	<span class="text-center col-xs-2 col-md-2" id="E10">
-		-
-	</span>
-	<div class="text-center col-xs-0 col-md-1"></div>
-  </div>-->
-
-    <!-- Row 11 --><!--
-  <div class="row" id="row11">
-	<div class="text-center col-xs-0 col-md-1"></div>
-	<div class="text-center col-xs-12 col-md-2" id="A11">
-	</div>
-	<div class="text-center col-xs-3 col-md-2" id="B11">
-		Promotional Plan (5 month Promo Rate)
-	</div>
-	<div class="text-center col-xs-3 col-md-2" id="C11">
-		Promotional Plan (18 month Promo Rate)
-	</div>
-	<div class="text-center col-xs-3 col-md-2" id="D11">
-	</div>
-	<div class="text-center col-xs-2 col-md-2" id="E11">
-	</div>
-	<div class="text-center col-xs-0 col-md-1"></div>
-  </div>-->
-
 </div>
-
-<!--<center><a href="http://finance.savecal.info/"><button id="apply" class="btn btn-danger col-xs-12">APPLY NOW</button></a></center>-->
 
 <!-- Disclaimer -->
 
 <div class="container"> 
   <div class="row">
-
-	<div class="text-center col-md-12">
+	<div class="text-center col-xs-12">
 		<div class="row">
-			<div class="text-center col-md-12">
+			<div class="text-center col-xs-12">
 				<h3>Disclaimer</h3>
 			</div>	
 		</div>
 		<div class="row">
-			<div class="text-center col-md-12">
+			<div class="text-center col-xs-12">
 				<h6>*Potential energy savings may vary depending on your personal life style, system settings, equipment maintenance, local climate, actual construction and installation. Not all home owners will qualify for the SaveCal Affordability Program. SaveCal uses third party financing.</h6>
 			</div>	
 		</div>
 		<div class="row">
-			<div class="text-center col-md-12">
+			<div class="text-center col-xs-12">
 				<h5>**Net impact is the total amount after the average energy savings have been deducted from the total financed amount, including incurred interest.</h5>
 			</div>	
 		</div>
 	</div>
   </div>
-
 </div>
 
 <hr>
