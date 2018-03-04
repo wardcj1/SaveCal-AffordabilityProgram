@@ -12,6 +12,9 @@ body {
 	font-family: arial;
 	border-radius: 7px;
 	text-shadow: 1px 1px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(1,158,221);
 }
 
 .cell {
