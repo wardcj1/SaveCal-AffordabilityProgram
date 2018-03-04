@@ -11,6 +11,7 @@ body {
 	background-color: rgb(255,255,255);
 	font-family: arial;
 	border-radius: 7px;
+	text-shadow: 1px 1px;
 }
 
 .cell {
@@ -112,4 +113,12 @@ body {
 
 #projectAmount, #monthlySavings, #rateIncrease, #submit, #clear {
 	margin: 10px;
+}
+
+.appForm {
+	background-image: url("bg.png");
+	border-radius: 7px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-bottom: 50px;
 }

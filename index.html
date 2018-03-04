@@ -10,9 +10,9 @@
 </head>
 
 <body>
-<div class="container jumbotron" id="banner">
+<div class="container jumbotron">
 		<center><img src="logo_clear.png" alt="SaveCal" id="logo">
-		<h1>Affordability Program</h1></center>
+		<h2>Affordability Program</h2></center>
 </div>  		
 
 <!-- Calculator inputs -->
@@ -170,178 +170,202 @@
 <hr>
 
 <!-- Application Form -->
-
+<div class="container appForm col-md-offset-3 col-md-6">
 <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-
 method="POST">
 
 <input type=hidden name="orgid" value="00D1I0000002Ml2">
 <input type=hidden name="retURL" value="http://www.savecal.com">
 
+<center><h2>Application</h2></center>
 
-<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20"
+<div class="form-group">
+	<label for="name">Contact Name</label>
+	<input class="form-control" id="name" maxlength="80" name="name" size="20" type="text" />
+</div>
 
-type="text" /><br>
+<div class="form-group">
+	<label for="phone">Phone</label>
+	<input class="form-control" id="phone" maxlength="40" name="phone" size="20" type="text" />
+</div>	
 
-<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20"
+<div class="form-group">
+	<label for="email">Email</label>
+	<input class="form-control" id="email" maxlength="80" name="email" size="20" type="text" />
+</div>
 
-type="text" /><br>
+<div class="form-group">
+	<label for="subject">Subject</label>
+	<input class="form-control" id="subject" maxlength="80" name="subject" size="20" type="text" />
+</div>
 
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20"
-
-type="text" /><br>
-
-<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject"
-
-size="20" type="text" /><br>
-
-<label for="description">Description</label><textarea name="description"></textarea><br><br>
-
-
-
-Photo ID Type:<select  id="00N1I00000LAbRv" name="00N1I00000LAbRv" title="Photo ID
-
-Type"><option value="">--None--</option><option value="Drivers License">Drivers
-
-License</option>
-<option value="State ID">State ID</option>
-<option value="US Passport">US Passport</option>
-<option value="US Military ID">US Military ID</option>
-<option value="ID Not Available at this Time">ID Not Available at this Time</option>
-</select><br>
-
-ID#:<input  id="00N1I00000LAbSo" maxlength="20" name="00N1I00000LAbSo" size="20" type="text"
-
-/><br>
-
-ID Issue Date:<span class="dateInput dateOnlyInput"><input  id="00N1I00000LAbS0"
-
-name="00N1I00000LAbS0" size="12" type="text" /></span><br>
-
-ID Expire Date:<span class="dateInput dateOnlyInput"><input  id="00N1I00000LAbSt"
-
-name="00N1I00000LAbSt" size="12" type="text" /></span><br>
-
-ID Issue State:<select  id="00N1I00000LAbSA" name="00N1I00000LAbSA" title="ID Issue
-
-State"><option value="">--None--</option><option value="AL">AL</option>
-<option value="AK">AK</option>
-<option value="AZ">AZ</option>
-<option value="AR">AR</option>
-<option value="CA">CA</option>
-<option value="CO">CO</option>
-<option value="CT">CT</option>
-<option value="DE">DE</option>
-<option value="FL">FL</option>
-<option value="GA">GA</option>
-<option value="HI">HI</option>
-<option value="ID">ID</option>
-<option value="IL">IL</option>
-<option value="IN">IN</option>
-<option value="IA">IA</option>
-<option value="KS">KS</option>
-<option value="KY">KY</option>
-<option value="LA">LA</option>
-<option value="ME">ME</option>
-<option value="MD">MD</option>
-<option value="MA">MA</option>
-<option value="MI">MI</option>
-<option value="MN">MN</option>
-<option value="MS">MS</option>
-<option value="MO">MO</option>
-<option value="MT">MT</option>
-<option value="NE">NE</option>
-<option value="NV">NV</option>
-<option value="NH">NH</option>
-<option value="NJ">NJ</option>
-<option value="NM">NM</option>
-<option value="NY">NY</option>
-<option value="NC">NC</option>
-<option value="ND">ND</option>
-<option value="OH">OH</option>
-<option value="OK">OK</option>
-<option value="OR">OR</option>
-<option value="PA">PA</option>
-<option value="RI">RI</option>
-<option value="SC">SC</option>
-<option value="SD">SD</option>
-<option value="TN">TN</option>
-<option value="TX">TX</option>
-<option value="UT">UT</option>
-<option value="VT">VT</option>
-<option value="VA">VA</option>
-<option value="WA">WA</option>
-<option value="WV">WV</option>
-<option value="WI">WI</option>
-<option value="WY">WY</option>
-</select><br><br>
+<div class="form-group">
+	<label for="description">Description</label>
+	<textarea class="form-control" name="description"></textarea>
+</div>
 
 
-Date of Birth:<span class="dateInput dateOnlyInput"><input  id="00N1I00000LAbSK"
+<div class="form-group">
+	<label for="Photo ID Type">Photo ID Type:</label>
+	<select class="form-control" id="00N1I00000LAbRv" name="00N1I00000LAbRv" title="Photo ID Type">
+		<option value="">--None--</option>
+		<option value="Drivers License">Drivers License</option>
+		<option value="State ID">State ID</option>
+		<option value="US Passport">US Passport</option>
+		<option value="US Military ID">US Military ID</option>
+		<option value="ID Not Available at this Time">ID Not Available at this Time</option>
+	</select>
+</div>
 
-name="00N1I00000LAbSK" size="12" type="text" /></span><br>
+<div class="form-group">
+	<label for="ID">ID#:</label>	
+	<input class="form-control" id="00N1I00000LAbSo" maxlength="20" name="00N1I00000LAbSo" size="20" type="text" />
+</div>
 
-SSN#:<input  id="00N1I00000LAbSj" maxlength="9" name="00N1I00000LAbSj" size="20" type="text"
+<div class="form-group">
+	<label for="ID Issue Date">ID Issue Date:</label>
+	<span class="dateInput dateOnlyInput">
+	<input class="form-control" id="00N1I00000LAbS0" name="00N1I00000LAbS0" size="12" type="date" /></span>
+</div>
 
-/><br><br>
+<div class="form-group">
+	<label for="ID Expire Date">ID Expire Date:</label>
+	<span class="dateInput dateOnlyInput">
+	<input class="form-control" id="00N1I00000LAbSt" name="00N1I00000LAbSt" size="12" type="date" /></span>
+</div>	
 
+<div class="form-group">
+	<label for="ID Issue State">ID Issue State:</label>
+	<select class="form-control" id="00N1I00000LAbSA" name="00N1I00000LAbSA" title="ID Issue State">
+		<option value="">--None--</option>
+		<option value="AL">AL</option>
+		<option value="AK">AK</option>
+		<option value="AZ">AZ</option>
+		<option value="AR">AR</option>
+		<option value="CA">CA</option>
+		<option value="CO">CO</option>
+		<option value="CT">CT</option>
+		<option value="DE">DE</option>
+		<option value="FL">FL</option>
+		<option value="GA">GA</option>
+		<option value="HI">HI</option>
+		<option value="ID">ID</option>
+		<option value="IL">IL</option>
+		<option value="IN">IN</option>
+		<option value="IA">IA</option>
+		<option value="KS">KS</option>
+		<option value="KY">KY</option>
+		<option value="LA">LA</option>
+		<option value="ME">ME</option>
+		<option value="MD">MD</option>
+		<option value="MA">MA</option>
+		<option value="MI">MI</option>
+		<option value="MN">MN</option>
+		<option value="MS">MS</option>
+		<option value="MO">MO</option>
+		<option value="MT">MT</option>
+		<option value="NE">NE</option>
+		<option value="NV">NV</option>
+		<option value="NH">NH</option>
+		<option value="NJ">NJ</option>
+		<option value="NM">NM</option>
+		<option value="NY">NY</option>
+		<option value="NC">NC</option>
+		<option value="ND">ND</option>
+		<option value="OH">OH</option>
+		<option value="OK">OK</option>
+		<option value="OR">OR</option>
+		<option value="PA">PA</option>
+		<option value="RI">RI</option>
+		<option value="SC">SC</option>
+		<option value="SD">SD</option>
+		<option value="TN">TN</option>
+		<option value="TX">TX</option>
+		<option value="UT">UT</option>
+		<option value="VT">VT</option>
+		<option value="VA">VA</option>
+		<option value="WA">WA</option>
+		<option value="WV">WV</option>
+		<option value="WI">WI</option>
+		<option value="WY">WY</option>
+	</select>
+</div>
 
+<div class="form-group">
+	<label for="Date of Birth">Date of Birth:</label>
+	<span class="dateInput dateOnlyInput">
+	<input class="form-control" id="00N1I00000LAbSK" name="00N1I00000LAbSK" size="12" type="date" /></span>
+</div>
 
-Employer:<input  id="00N1I00000LAbSP" maxlength="255" name="00N1I00000LAbSP" size="20"
+<div class="form-group">
+	<label for="SSN">SSN#:</label>
+	<input class="form-control" id="00N1I00000LAbSj" maxlength="9" name="00N1I00000LAbSj" size="20" type="text" />
+</div>
 
-type="text" /><br>
+<div class="form-group">
+	<label for="Employer">Employer:</label>
+	<input class="form-control" id="00N1I00000LAbSP" maxlength="255" name="00N1I00000LAbSP" size="20" type="text" />
+</div>
 
-Self-Employed:<select  id="00N1I00000LAbT3" name="00N1I00000LAbT3" title="Self-
+<div class="form-group">
+	<label for="Self-Employed">Self-Employed:</label>
+	<select class="form-control" id="00N1I00000LAbT3" name="00N1I00000LAbT3" title="Self-Employed">
+		<option value="">--None--</option>
+		<option value="Yes">Yes</option>
+		<option value="No">No</option>
+	</select>
+</div>
 
-Employed"><option value="">--None--</option><option value="Yes">Yes</option>
-<option value="No">No</option>
-</select><br>
+<div class="form-group">
+	<label for="Position">Position:</label>
+	<input class="form-control" id="00N1I00000LAbSU" maxlength="100" name="00N1I00000LAbSU" size="20" type="text" />
+</div>
 
-Position:<input  id="00N1I00000LAbSU" maxlength="100" name="00N1I00000LAbSU" size="20"
+<div class="form-group">
+	<label for="Employer Phone">Employer Phone:</label>
+	<input class="form-control" id="00N1I00000LAbT8" maxlength="40" name="00N1I00000LAbT8" onkeydown="formatPhoneOnEnter(this, event);" size="20" type="text" />
+</div>
 
-type="text" /><br>
+<div class="form-group">
+	<label for="Years at Current Job">Years at Current Job:</label>
+	<input class="form-control" id="00N1I00000LAbSZ" maxlength="2" name="00N1I00000LAbSZ" size="20" type="text" />
+</div>
 
-Employer Phone:<input  id="00N1I00000LAbT8" maxlength="40" name="00N1I00000LAbT8"
+<div class="form-group">
+	<label for="Months at Current Job">Months at Current Job:</label>
+	<input class="form-control" id="00N1I00000LAbSe" maxlength="2" name="00N1I00000LAbSe" size="20" type="text" />
+</div>
 
-onkeydown="formatPhoneOnEnter(this, event);" size="20" type="text" /><br>
+<div class="form-group">
+	<label for="Mortgage Payment">Mortgage Payment:</label>
+	<input class="form-control" id="00N1I00000LAbSy" name="00N1I00000LAbSy" size="20" type="text" />
+</div>
 
-Years at Current Job:<input  id="00N1I00000LAbSZ" maxlength="2" name="00N1I00000LAbSZ"
+<div class="form-group">
+	<label for="Gross Monthly Income">Gross Monthly Income:</label>
+	<input class="form-control" id="00N1I00000LAbTD" name="00N1I00000LAbTD" size="20" type="text" />
+</div>
 
-size="20" type="text" /><br>
+<div class="form-group">
+	<label for="Target Payment">Target Payment:</label>
+	<input class="form-control" id="00N1I00000LBv52" name="00N1I00000LBv52" size="20" type="text" />
+</div>
 
-Months at Current Job:<input  id="00N1I00000LAbSe" maxlength="2" name="00N1I00000LAbSe"
-
-size="20" type="text" /><br><br>
-
-
-Mortgage Payment:<input  id="00N1I00000LAbSy" name="00N1I00000LAbSy" size="20" type="text"
-
-/><br>
-
-Gross Monthly Income:<input  id="00N1I00000LAbTD" name="00N1I00000LAbTD" size="20"
-
-type="text" /><br><br>
-
-Target Payment:<input  id="00N1I00000LBv52" name="00N1I00000LBv52" size="20" type="text" /><br>
-
-
-Comments:<textarea  id="00N1I00000LAbTS" name="00N1I00000LAbTS" type="text"
-
-wrap="soft"></textarea><br>
+<div class="form-group">
+	<label for="Comments">Comments:</label>
+	<textarea class="form-control" id="00N1I00000LAbTS" name="00N1I00000LAbTS" type="text" wrap="soft"></textarea>
+</div>
 
 <hr>
-<h5>
-Collection of Information and Verification. We may require that you furnish us and the Lender with identifying information. We use this information as detailed under our Privacy Policy. We also use this information to match you with potential loan offers from Lenders. You authorize us and Lenders to obtain a personal credit profile from a credit bureau for credit pre-qualification and identity verification. You further agree that we may verify your identity and the information you provide us with third parties. A Lender may require more information from you to apply for a loan. The terms and conditions of any loan available from the Lender may change depending on information available to the Lender or your complete credit profile. We, or a Lender, may require further information from you to comply with our legal obligations, including, without limitation, anti-terrorism laws and regulations. You agree that any information you provide us will be governed by the Terms of Use, including, without limitation, the Conditions of Use section below. 
-</h5>
-<hr>
-
 <h4>
-By clicking submit, you are agreeing to the above terms.
+Collection of Information and Verification. We may require that you furnish us and the Lender with identifying information. We use this information as detailed under our Privacy Policy. We also use this information to match you with potential loan offers from Lenders. You authorize us and Lenders to obtain a personal credit profile from a credit bureau for credit pre-qualification and identity verification. You further agree that we may verify your identity and the information you provide us with third parties. A Lender may require more information from you to apply for a loan. The terms and conditions of any loan available from the Lender may change depending on information available to the Lender or your complete credit profile. We, or a Lender, may require further information from you to comply with our legal obligations, including, without limitation, anti-terrorism laws and regulations. You agree that any information you provide us will be governed by the Terms of Use, including, without limitation, the Conditions of Use section below. 
 </h4>
 
-<input type="submit" name="submit" value="Submit">
-
+<center>
+<h4>By clicking submit, you are agreeing to the above terms.</h4>
+<input type="submit" class="btn btn-lg btn-warning" name="submit" value="Submit"></center>
 </form>
+</div>
 
 <script src="app.js"></script>
 </body>
